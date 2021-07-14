@@ -1,12 +1,18 @@
-/*fonts*/
+/*---------------
+    fonts
+-----------------*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-/*common style*/
+/*-----------------
+   common style
+-------------------*/
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #FFFFFF;
     margin: 0;
 }
-/*top section design*/
+/*-------------------
+  top section design
+---------------------*/
 .top-section{
     width: 1440px;
     background-color: #2D25A0;
@@ -41,13 +47,17 @@ body {
 .top-section img{
     width: 388px;
 }
-/*Container style*/
+/*----------------
+    Container style
+--------------------*/
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-/*top players style*/
+/*---------------------
+      top players style
+------------------------*/
 .top-players {
     margin-top: 70px;
     display: grid;
@@ -81,4 +91,63 @@ body {
 .player p {
     color: #6C6C6C;
     font-size: 16px;
+}
+/*-------------------
+     footer style    
+----------------------*/
+footer{
+    margin-top: 158px;
+    margin-bottom: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer img {
+    width: 483px;
+}
+.fab {
+    width: 32px;
+    height: 32px;
+    color: #969BAB;
+    border-radius: 50%;
+}
+footer p{
+    font-size: 18px;
+    color: #000000;
+}
+/*-----------------
+    Media Queries
+--------------------*/
+
+/*     Mobile device  */
+@media only screen  and (max-width:688px) {
+    .top-section {
+        width: 100%;
+        padding: 135px 15px 39px 16px;
+    }
+    .top-details{
+        margin-bottom: 50px;
+    }
+    .top-section:hover .top-details h1 {
+        transform: scale(1.15) rotate(360deg);
+    }
+    .top-section .top-details h1{
+        font-size: 36px;
+    }
+    .top-section .top-details img{
+        width: 329px;
+    }
+    .top-players , .players{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .top-players{
+        grid-row-gap: 24px;
+    }
+    .player,.top-section{
+        flex-direction: column;
+    }
+    footer img{
+        width: 80%;
+    }
 }
